@@ -1,1 +1,1 @@
-// philharmonic-connector-impl-dns: placeholder
+//! Placeholder for the DNS connector implementation.
