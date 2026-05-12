@@ -1,0 +1,19 @@
+[package]
+name = "philharmonic-connector-impl-dns"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.88"
+license = "Apache-2.0 OR MPL-2.0"
+readme = "README.md"
+repository = "https://github.com/metastable-void/philharmonic-connector-impl-dns"
+description = "DNS-querying connector implementation for Philharmonic (dns_query capability — stub-resolver via /etc/resolv.conf)."
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+codegen-units = 1
+panic = "abort"
+overflow-checks = true
