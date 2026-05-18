@@ -9,9 +9,18 @@ this crate adheres to
 
 ## [Unreleased]
 
-Implementation pending. See the
-[Philharmonic workspace ROADMAP](https://github.com/metastable-void/philharmonic-workspace/blob/main/ROADMAP.md)
-for the phase that populates this crate.
+No unreleased changes.
+
+## [0.1.0] - 2026-05-18
+
+- Added the first substantive `dns_query` connector
+  implementation backed by `mechanics-dns`.
+- Added endpoint policy gates for RR type allowlists, zone
+  allowlists, zone blocklists, both-list overlay-deny semantics,
+  and per-call timeout selection.
+- Added response normalization to presentation-form
+  `{type, name, ttl, data}` records and tests for policy,
+  timeout, and RCODE error mapping behavior.
 
 ## [0.0.0]
 

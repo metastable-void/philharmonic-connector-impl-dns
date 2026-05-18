@@ -1,6 +1,6 @@
 [package]
 name = "philharmonic-connector-impl-dns"
-version = "0.0.0"
+version = "0.1.0"
 edition = "2024"
 rust-version = "1.88"
 license = "Apache-2.0 OR MPL-2.0"
@@ -9,6 +9,16 @@ repository = "https://github.com/metastable-void/philharmonic-connector-impl-dns
 description = "DNS-querying connector implementation for Philharmonic (dns_query capability — stub-resolver via /etc/resolv.conf)."
 
 [dependencies]
+async-trait = { version = "0.1", default-features = false, features = [] }
+mechanics-dns = { version = "0.1", default-features = false, features = [] }
+philharmonic-connector-impl-api = { version = "0.1", default-features = false, features = [] }
+serde = { version = "1", default-features = false, features = ["derive", "std"] }
+serde_json = { version = "1", default-features = false, features = ["std"] }
+thiserror = { version = "2", default-features = false, features = ["std"] }
+tokio = { version = "1", default-features = false, features = ["time"] }
+
+[dev-dependencies]
+tokio = { version = "1", default-features = false, features = ["macros", "rt", "time"] }
 
 [profile.release]
 opt-level = 3
